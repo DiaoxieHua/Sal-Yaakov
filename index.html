@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>流星追光者</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <header class="panel">
+        <h1>流星追光者</h1>
+        <p>
+          操控你的追光者，收集墜落的星光並躲避危險的暗物質。累積分數解鎖
+          更刺激的速度，偶爾還會有護盾祝福幫你渡過危機！
+        </p>
+        <button id="startButton" class="primary">開始遊戲</button>
+      </header>
+      <main class="game-area">
+        <canvas id="game" width="900" height="600" aria-label="遊戲畫布"></canvas>
+        <section id="hud" class="hud" aria-live="polite">
+          <div>分數：<span id="score">0</span></div>
+          <div>等級：<span id="level">1</span></div>
+          <div>生命：<span id="lives">3</span></div>
+          <div>最高分：<span id="best">0</span></div>
+        </section>
+        <section id="message" class="message" role="status"></section>
+      </main>
+      <aside class="panel tips">
+        <h2>玩法提示</h2>
+        <ul>
+          <li>使用 ← → 方向鍵（或 A / D）移動。</li>
+          <li>按空白鍵啟動短時間的<span class="emphasis">閃避疾跑</span>。</li>
+          <li>收集金色星光獲得 10 分，銀色星光獲得 20 分。</li>
+          <li>紅色暗物質會奪走一點生命，除非你戴著護盾。</li>
+          <li>捕捉藍色護盾球，可獲得 5 秒的保護力場。</li>
+        </ul>
+        <p>挑戰更高分數，寫下屬於你的星際冒險！</p>
+      </aside>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
